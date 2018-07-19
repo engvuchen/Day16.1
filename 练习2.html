@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习2</title>
+	</head>
+	<body>
+		<p id="content">你是谁？</p>
+		<input type="text" id="nameinput" placeholder="输入你的名字"/>
+		<button id="sendbtn">发送</button>
+		<script>
+			sendbtn.onclick=function(){
+				content.innerHTML="Hello,"+nameinput.value;
+			}
+		</script>
+	</body>
+</html>

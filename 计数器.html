@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>计数器</title>
+</head>
+<body>        
+    <p><input id="first-number" type="number" value="0" placeholder="第一个数字">
+        <input id="second-number" type="number" value="0" placeholder="第二个数字">
+        <button id="add-btn">加</button>
+        <button id="minus-btn">减</button>
+        <button id="times-btn">乘</button>
+        <button id="divide-btn">除</button></p>
+   
+	<p id="result">运算结果</p>
+    <script>
+		var add=document.getElementById("add-btn");
+		var minus=document.getElementById("minus-btn");
+		var times=document.getElementById("times-btn");
+		var divide=document.getElementById("divide-btn");
+		
+		add.onclick=function(){
+			 var a=parseFloat(document.getElementById("first-number").value)
+			 var b=parseFloat(document.getElementById("second-number").value)
+			 //不转换类型的话就会变成字符串的连接
+			 document.getElementById("result").innerHTML=a+b;
+		}
+		minus.onclick=function(){
+			 var a=parseFloat(document.getElementById("first-number").value)
+			 var b=parseFloat(document.getElementById("second-number").value)
+			 document.getElementById("result").innerHTML=a-b;
+		}
+		times.onclick=function(){
+			 var a=parseFloat(document.getElementById("first-number").value)
+			 var b=parseFloat(document.getElementById("second-number").value)
+			 document.getElementById("result").innerHTML=a*b;
+		}
+		divide	.onclick=function(){
+			 var a=parseFloat(document.getElementById("first-number").value)
+			 var b=parseFloat(document.getElementById("second-number").value)
+			 //没有进行除0错误的处理
+			 document.getElementById("result").innerHTML=a/b;
+		}
+    </script>
+</body>
+</html>
